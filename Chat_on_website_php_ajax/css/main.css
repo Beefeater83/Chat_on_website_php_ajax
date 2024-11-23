@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(238, 238, 238);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+header {
+    background: #222;
+    padding: 20px 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+header nav a.btn {
+    padding: 5px;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    color: #a1a1a1;
+}
+
+header nav a.btn:hover {
+    border-color: #de7474;
+}
+.mobile{
+    display: none;
+    width: 200px; 
+    position: fixed;
+    right: 0; 
+    top: 0;
+    height: 50vh;
+    background: linear-gradient(to bottom, rgba(34,34,34,1) 0%,rgba(34,34,34, 1) 56%,rgba(139,139,139,08) 75%,rgba(238,238,238,0.66) 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    z-index: 10;
+    opacity: 0.8;
+    padding-top: 6vh;
+    padding-left: 5px; 
+    border-bottom-left-radius: 20px;
+}
+.mobile a:first-of-type{margin-top: 50px;}
+.mobile a{
+    display: block;
+    width: 100%; 
+    float: left;
+    color: #f3f0f0;
+    font-size: 1.1em; 
+    font-weight: bold;
+    transition: all 500ms ease;
+    text-align: left;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.mobile a:hover{font-size: 1.4em;;}
+
+.bars, .arrow{
+    position: relative;
+    right: -50px;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: all 500ms ease;
+    z-index: 15;
+}
+.bars:hover, .arrow:hover{transform: scale(1.2)}
+
+
+
+main {
+    float: left;
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 50%;
+    @media(max-width: 1300px) AND (min-width: 900px){
+        width: 50%;
+        margin: auto 30px;
+    }
+    @media(max-width: 900px) AND (min-width: 600px){
+        width: 90%;
+        margin: auto 30px;
+    }
+    @media(max-width: 600px) AND (min-width: 300px){
+        width: 80%;
+        margin: 5px 10px;
+    }
+    
+}
+
+
+aside {
+    float: right;
+    margin-top: 50px;
+    margin-right: 100px;
+    width: 400px;
+    @media(max-width: 1200px) AND (min-width: 900px){
+        width: 300px;
+        margin-right: 50px;
+    }
+    @media(max-width: 900px) AND (min-width: 600px){
+        width: 80%;
+        margin: auto 30px;
+        float: left;
+    }
+    @media(max-width: 600px) AND (min-width: 300px){
+        width: 90%;
+        margin: auto 10px;
+        float: left;
+    }
+}
+
+aside .info {
+    background: #ffc007;
+    color: #42410c;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    line-height: 140%;
+    border-radius: 5px;
+}
+
+aside .info h2 {
+    margin-bottom: 10px;
+}
+
+aside img {
+    width: 100%;
+    border: 5px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+form {
+    margin: 30px 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+form input, form textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form button {
+    border: 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #fec008;
+    color: #42410c;
+    transition: transform 500ms ease;
+}
+
+form button:hover, .post a:hover {
+    transform: scale(1.1);
+}
+
+.error-mess, .users_block > .error{
+    color: #de7474;
+    margin: 10px 0;
+    font-weight: 600;
+    display: none;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background: #222;
+    padding: 30px;
+    color: #fff;
+    margin-top: 100px;
+}
+
+.users_block {
+    margin: 30px 0;
+}
+.user{
+    width: 80%;
+    height: 40px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    background: #fec008;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user button, .chat > .btn {
+    border: 0;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f34a2c;
+    color: #fff;
+    transition: transform 500ms ease;
+}
+
+.user button:hover, .chat > .btn:hover{
+    transform: scale(1.05);
+}
+
+.post {
+    margin-bottom: 50px;
+}
+
+.post h1{
+   margin-bottom: 10px;
+}
+
+.post .avtor{
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.post .avtor span {
+    background: #e1bb4a;
+    padding: 2px 7px;
+    font-weight: 300;
+    border-radius: 2px;
+}
+
+.post a {
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #fec008;
+    color: #42410c;
+    transition: transform 500ms ease;
+}
+
+.comment {
+    width: 100%;
+    padding: 20px;
+    background: #fec008;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #42410c;
+    margin-bottom: 30px;
+}
+
+.chat{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.msg_empty, .msg{
+    border-radius: 5px;
+    background: #f7dca2;
+    color: #42410c;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.msg{
+    background: #c5d8f1;
+}
+
+.chat > #mess{
+    border-radius: 5px;
+    padding: 10px 10px;
+    outline: none;
+    border: 1px solid silver;
+    cursor: pointer;
+}
+.chat > .btn{
+    background: #558d30;
+    width: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.chat > #chat_messages{
+    max-height: 250px;
+    overflow-y: auto;  
+}
